@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tableLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:shrinkColumns="*"
+    android:stretchColumns="*"
+    android:textAlignment="center"
+    android:layout_alignWithParentIfMissing="false"
+    android:baselineAligned="true">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            style=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Codigo TOTP:"
+            android:textAlignment="center" >
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/eltotpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_span="2" />
+
+    </TableRow>
+
+    <!--
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+
+        <TextView
+            style=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resultado:"
+            android:textAlignment="center">
+        </TextView>
+
+        <EditText
+            android:id="@+id/larespuesta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:layout_span="2" />
+    </TableRow>-->
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/bn_post"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="postData"
+            android:text="@string/post"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/bn_clear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="clearControls"
+            android:text="@string/clear"
+            android:layout_weight="1" />
+
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Generar código TOTP"
+            android:id="@+id/button"
+            android:layout_marginTop="12dp"
+            android:onClick="genero"
+            android:textAlignment="center"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/bn_postauto"
+            android:onClick="autoPostData"
+            android:text="@string/autopost"
+            android:layout_marginTop="12dp"
+            android:contextClickable="true"
+            android:layout_weight="1" />
+
+    </TableRow>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Código TOTP"
+        android:id="@+id/textViewResultado"
+        android:layout_marginTop="15dp"
+        android:textAlignment="center" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:text="APDU Status Word"
+        android:id="@+id/info"
+        android:layout_height="20dp"
+        android:layout_marginTop="30dp"
+        android:textSize="15dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:id="@+id/info2"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:textSize="15dp"/>
+
+    <TableRow>
+
+        <ImageView
+            android:layout_width="@dimen/activity_horizontal_margin"
+            android:layout_height="@android:dimen/notification_large_icon_height"
+            app:srcCompat="@drawable/uc3"
+            android:layout_marginTop="90dp"
+            android:id="@+id/imageView4" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:text="Acerca la tarjeta para\ngenerar el código TOTP"
+            android:id="@+id/data"
+            android:layout_height="65dp"
+            android:layout_marginTop="90dp"
+            android:textSize="25dp"/>
+    </TableRow>
+
+    <ProgressBar
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/barra"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:elevation="2dp"
+        android:scrollbarSize="30dp"
+        android:maxHeight="35dp" />
+
+</TableLayout>
+

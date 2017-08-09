@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="totpass">Codigo TOTP</string>
+    <string name="respuesta">Respuesta</string>
+    <string name="retrieve">Retrieve</string>
+    <string name="autopost">Validar TOTP</string>
+    <string name="post">Post</string>
+    <string name="clear">Clear</string>
+    <string name="app_name">TOTP Generador</string>
+
+</resources>
