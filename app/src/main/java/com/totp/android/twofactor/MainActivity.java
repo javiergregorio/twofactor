@@ -14,7 +14,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -248,9 +247,7 @@ public class MainActivity extends AppCompatActivity {
 
         // the passed String is the URL we will POST to
         wst.execute(new String[]{SERVICE_URL});
-
     }
-
 
     @Override
     public void onResume() {
@@ -411,7 +408,6 @@ public class MainActivity extends AppCompatActivity {
         EditText edTotpass = (EditText) findViewById(R.id.eltotpass);
         edTotpass.setText("");
     }
-
 
 
     //POST: Enviar datos desde la app al servidor
@@ -642,7 +638,6 @@ public class MainActivity extends AppCompatActivity {
             return response;
         }
 
-
         private String inputStreamToString(InputStream is) {
 
             String line = "";
@@ -664,5 +659,4 @@ public class MainActivity extends AppCompatActivity {
             return total.toString();
         }
     }
-
 }
